@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sportify</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./fonts/fontawesome-free-6.1.0-web/css/all.min.css">
+
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item-1">
+
+            </div>
+            <div class="main grid-item-2">
+                <div class="player">
+                    <div class="player__heading">
+                        <div class="player__image">
+                            <div class="blur"></div>
+                            <div class="line"></div>
+                            <h2 class="player__image-text">Gigi Hương <br> Giang Mix</h2>
+                        </div>
+
+                        <div class="player__content">
+                            <span>PLAYLIST</span>
+                            <h4 class="content__album">GiGi Hương Giang Mix</h4>
+                            <div class="content__singer-wrap">
+                                <a href="content__singer-link">JayKi</a> 
+                                , 
+                                <a href="content__singer-link">Hoàng Dũng</a>
+                                ,
+                                <a href="content__singer-link">Grey D</a>  
+                                and more
+                            </div>
+                            
+                            <div class="content__">
+                                Sportify
+                                <span>
+                                    <p class="content__song-quantity">50 songs</p>
+                                    <p class="content__duration">about 3 hr 30 min</p> 
+                                </span>
+                            </div>
+                            
+
+                        </div>
+
+                    </div>
+                    
+                    <div class="player__body">
+                        <div class="body-left">
+                            <div class="body-left__function">
+                                <button class="function__btn-love">
+                                    <i class="fa-regular fa-heart btn-like"></i>
+                                    <i class="fa-solid fa-heart btn-dislike" style="display: none"></i>
+                                </button>
+                                <button class="function__btn-option"><i class="fa-solid fa-ellipsis"></i></button>
+                            </div>
+                        </div>
+                        <button class="body__btn-play play-btn">
+                            <i class="fa-solid fa-play" ></i>
+                            <i class="fa-solid fa-pause" style="display: none"></i>
+                        </button>
+                        
+                        
+                    </div>
+                    
+                    <audio id="audio" src=""></audio>
+                </div>
+        
+                <div class="playlist">
+                    <div class="song-wrap active">
+                        <img src="./img/ab67616d00001e02520d32739a2c7ff2c70d4e85.jpg" alt="" class="song__img">
+                        <div class="song__description">
+                            <p class="song__name">Du Hành Vào Tâm Trí</p>
+                            <p class="song__singer">GiGi Hương Giang</p>
+                        </div>
+                        <button class="song__option btn"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+        
+                </div>
+            </div>
+    
+            <div class="playing-bar">
+                <div class="playing-bar__content">
+                    <img src="./img/ab67616d00001e02520d32739a2c7ff2c70d4e85.jpg" alt="" class="playing-bar__img song__img" style="width: 56px; height:56px">
+                    <div class="playing-bar__des">
+                        <p class="playing-bar__des-name song__name">Du Hành Vào Tâm Trí</p>
+                        <p class="playing-bar__des-singer song__singer" style="font-size: 11px">GiGi Hương Giang</p>
+                    </div>
+                </div>
+    
+                <div class="playing-bar__control">
+                    <div class="control__buttons">
+                        <button class="btn btn-shuffle"><i class="fa-solid fa-shuffle"></i></button>
+                        <button class="btn btn-previous"><i class="fa-solid fa-backward-step"></i></button>
+                        <button class="btn play-btn" id="control__play-btn">
+                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-solid fa-pause" style="display: none"></i>
+                        </button>
+                        <button class="btn btn-next"><i class="fa-solid fa-forward-step"></i></button>
+                        <button class="btn btn-repeat"><i class="fa-solid fa-repeat"></i></button>
+                    </div>
+                    <div class="control__slider">
+                        <p class="control__slider-text current-time">0:00</p>
+                        <input type="range" min="0" max="100" step="1" value="0" class="slider" id="myRange">
+    
+                        <p class="control__slider-text duration-time">0:00</p>
+    
+                    </div>
+                </div>
+    
+                <div class="playing-bar__function">
+                    <button class="btn">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="fa-solid fa-align-justify"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="fa-solid fa-computer"></i>
+                    </button>
+    
+                    <div class="playing-bar__function-volume">
+                        <button class="btn btn-volumn">
+                            <i class="fa-solid fa-volume-off" style="display:none"></i>
+                            <i class="fa-solid fa-volume-low" ></i>
+                            <i class="fa-solid fa-volume-high" style="display:none"></i>
+    
+                        </button>
+                        <input type="range" min="0" max="1" step="0.1" value="0.5" class="slider" id="myVolume">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    
+        
+    </body>
+    <script>
+        const PLAYER_STORAGE_KEY = "Sportify";
+        const greenColor = '#1ED760';
+        const grayColor = '#B0B0B0';
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+
+        const main = $('.main');
+        const player = $('.player');
+        const playlist = $('.playlist'); 
+        const playBtn = $$('.play-btn');
+        const btnLike = $('.function__btn-love');
+        const audio = $('#audio');
+        const play = $$('.fa-play');
+        const pause = $$('.fa-pause');
+        const myRange = $('#myRange');
+        const myVolume = $('#myVolume');
+        const playerHeading = $('.player__heading');
+        const currentTime = $('.current-time');
+        const durationTime = $('.duration-time');
+        const playerTitle = $('.player__title');
+        const playerImg = $('.player__image');
+        const playImgText = $('.player__image-text');
+        const line = $('.line');
+        const nextBtn = $('.btn-next')
+        const prevBtn = $('.btn-previous')
+        const repeatBtn = $('.btn-repeat')
+        const shuffleBtn = $('.btn-shuffle');
+        const volumnBtns = $$('.btn-volumn i');
+
+        const app = {
+            songs: [
+                {
+                    name: 'Du Hành Vào Tâm Trí', 
+                    singer: 'GiGi Hương Giang', 
+                    image: './img/ab67616d00001e02520d32739a2c7ff2c70d4e85.jpg',
+                    audio: './audio/DuHanhVaoTamTri.mp3'
+                },
+                {
+                    name: '7 Rings', 
+                    singer: 'Ariana Grande', 
+                    image: './img/7_rings.jpg',
+                    audio: './audio/7_rings.mp3'
+                },
+                {
+                    name: 'Changes', 
+                    singer: 'Lauv', 
+                    image: './img/changes.jpg',
+                    audio: './audio/Changes.mp3'
+                },
+                {
+                    name: 'Fake', 
+                    singer: 'Lauv', 
+                    image: './img/fake.jpg',
+                    audio: './audio/Fake.mp3'
+                },
+                {
+                    name: "I'm Lonely", 
+                    singer: 'Lauv', 
+                    image: './img/im_lonely.jpg',
+                    audio: './audio/Im_lonely.mp3'
+                },
+                {
+                    name: "I'm So Tired", 
+                    singer: 'Lauv', 
+                    image: './img/im_lonely.jpg',
+                    audio: './audio/Im_so_tired.mp3'
+                },
+                {
+                    name: 'Leave The Door Open', 
+                    singer: 'Bruno Mar', 
+                    image: './img/leave_the_door_open.jpg',
+                    audio: './audio/Leave_the_door_open.mp3'
+                },
+                {
+                    name: 'Paris In Rain', 
+                    singer: 'Lauv', 
+                    image: './img/paris_in_rain.jpg',
+                    audio: './audio/Paris_in_rain.mp3'
+                },
+                {
+                    name: 'Positions', 
+                    singer: 'Ariana Grande', 
+                    image: './img/positions.jpg',
+                    audio: './audio/Positions.mp3'
+                },
+                {
+                    name: 'Save Your Tears', 
+                    singer: 'The Weeknd', 
+                    image: './img/the_weeknd.jpg',
+                    audio: './audio/Save_your_tears.mp3'
+                },
+                {
+                    name: 'Versace On The Floor', 
+                    singer: 'Bruno Mar', 
+                    image: './img/versace_on_the_floor.jpg',
+                    audio: './audio/Versace_on_the_floor.mp3'
+                },
+                {
+                    name: 'Vu Vơ', 
+                    singer: 'GiGi Hương Giang', 
+                    image: './img/ab67616d00001e02520d32739a2c7ff2c70d4e85.jpg',
+                    audio: './audio/Vu_vơ.mp3'
+                },
+                {
+                    name: 'Positions', 
+                    singer: 'Ariana Grande', 
+                    image: './img/positions.jpg',
+                    audio: './audio/Positions.mp3'
+                },
+                {
+                    name: 'Save Your Tears', 
+                    singer: 'The Weeknd', 
+                    image: './img/the_weeknd.jpg',
+                    audio: './audio/Save_your_tears.mp3'
+                },
+                {
+                    name: 'Versace On The Floor', 
+                    singer: 'Bruno Mar', 
+                    image: './img/versace_on_the_floor.jpg',
+                    audio: './audio/Versace_on_the_floor.mp3'
+                },
+                {
+                    name: 'Vu Vơ', 
+                    singer: 'GiGi Hương Giang', 
+                    image: './img/ab67616d00001e02520d32739a2c7ff2c70d4e85.jpg',
+                    audio: './audio/Vu_vơ.mp3'
+                }
+            ],
+            isPlaying: false,
+            isShuffling: false,
+            isRepeating: false,
+            
+            currentIndex: 0,
+
+            config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
+            setConfig: function(key, value) {
+                this.config[key] = value;
+                localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(this.config));
+            },
+            render: function() {
+                var renderList = this.songs.reduce(function(html, song, i) {
+                return html +
+                `
+                <div class="song-wrap" data-index="${i}">
+                    <img src="${song.image}" alt="" class="song__img">
+                    <div class="song__description">
+                        <p class="song__name">${song.name}</p>
+                        <p class="song__singer">${song.singer}</p>
+                    </div>
+                    <button class="song__option btn"><i class="fa-solid fa-ellipsis"></i></button>
+                </div>
+                `
+                }, '');
+                playlist.innerHTML = renderList;
+                this.loadCurrentSong();
+
+                
+
+
+
+                main.style.height = $('.playing-bar').offsetTop + 'px';
+                
+            },
+            defineProperties: function() {
+                Object.defineProperty(this, 'currentSong', {
+                    get: function() {
+                        return this.songs[this.currentIndex];
+                    }
+                })
+            },
+            
+            loadCurrentSong: function() {
+                var songList = $$('.song-wrap');
+
+
+                var playingBarImg = $('.playing-bar__img');
+                var playingBarName = $('.playing-bar__des-name');
+                var playingBarSinger = $('.playing-bar__des-singer');
+
+                var activeSong = $('.active');
+                if(activeSong) {
+                    activeSong.classList.remove('active');
+                }
+                songList[this.currentIndex].classList.add('active');
+
+                playerTitle.innerHTML = this.currentSong.name;
+                playerImg.style.backgroundImage = 'url(' + this.currentSong.image + ')';
+
+                playingBarImg.src = this.currentSong.image;
+                playingBarName.innerHTML = this.currentSong.name;
+                playingBarSinger.innerHTML = this.currentSong.singer;
+                audio.src = app.songs[this.currentIndex].audio;
+
+                setTimeout(function() {
+                    let totalTime = audio.duration;
+                    let seconds = Math.round(totalTime % 60);
+                    let minutes = Math.floor(totalTime / 60);
+                    if(seconds < 10) seconds = '0' + seconds;
+                    if(minutes < 10) minutes = '0' + minutes;
+                    durationTime.innerHTML = minutes + ':' + seconds;
+
+                }, 100)
+
+            },
+            loadConfig: function() {
+                this.isShuffling = this.config.isShuffling;
+                this.isRepeating = this.config.isRepeating;
+
+            },
+            shuffleSong: function() {
+                let oldIndex = this.currentIndex;
+                let newIndex;
+                do {
+                    newIndex = Math.floor(Math.random() * this.songs.length);
+                }
+                while(newIndex === oldIndex)
+                this.currentIndex = newIndex;
+            },
+
+    
+            nextSong: function() {
+                if(this.currentIndex < this.songs.length - 1) {
+                    this.currentIndex++;
+                }
+                else this.currentIndex = 0;
+            },
+
+            prevSong: function() {
+                if(this.currentIndex > 0) {
+                    this.currentIndex--;
+                }
+                else this.currentIndex = this.songs.length - 1;
+            },
+            hideBtn: function(nodeList, index) {
+                nodeList[index].style.display = 'none';
+            }
+            ,
+            showBtn: function(nodeList, index) {
+                nodeList[index].style.display = 'block';
+            },
+
+            handleEvent: function() {
+
+                // Xử lý heading khi cuộn trang
+                const playerImgWidth = playerImg.offsetWidth;
+                const playerHeadingHeight = playerHeading.offsetHeight;
+                
+                main.onscroll = function() {
+                    const scrollTop = main.scrollTop;
+                    var newWidth = playerImgWidth - scrollTop;
+                    
+                    playerImg.style.height = newWidth > 0 ? newWidth + 'px' : 0;
+                    playerImg.style.opacity = newWidth / playerImgWidth;
+        
+
+                    if(scrollTop >= 193.6) {
+                        playerHeading.style.backgroundColor = 'rgb(35 61 86)';
+                        playBtn[0].style.position = 'fixed';
+                        playBtn[0].style.right = '16px';
+                        playBtn[0].style.top = '28px';
+                    }
+                    else 
+                    {
+                        playerHeading.style.backgroundColor = 'transparent';
+                        $('.body__btn-play').style = '';
+                    }
+                }
+
+                //Xử lý khu click shuffle
+                shuffleBtn.onclick = function() {
+              
+                    app.isShuffling = !app.isShuffling;
+                    shuffleBtn.classList.toggle('btn--active', app.isShuffling);
+                    app.setConfig('isShuffling', app.isShuffling);
+
+                }
+
+                //Xử lý khu click repeat
+                repeatBtn.onclick = function() {
+                    app.isRepeating = !app.isRepeating;
+                    repeatBtn.classList.toggle('btn--active', app.isRepeating);
+                    app.setConfig('isRepeating', app.isRepeating);
+                }
+
+
+                //Xử lý đổi màu nút like khi click
+                btnLike.onclick = function() {
+                    var like = $('.btn-like');
+                    var dislike = $('.btn-dislike');
+
+                    if(dislike.style.display === 'none') {
+                        dislike.style.display = 'block'
+                        like.style.display = 'none'
+                    }
+                    else {
+                        dislike.style.display = 'none'
+                        like.style.display = 'block'
+                    }
+
+                }
+                
+                //Xử lý khi bấm nút PLAY
+                playBtn[0].onclick = function() {
+                    if(app.isPlaying) {
+                        audio.pause();
+                    }
+                    else {
+                        audio.play();
+
+                    }
+                }
+
+                playBtn[1].onclick = function() {
+
+                    if(app.isPlaying) {
+                        audio.pause();
+                    }
+                    else {
+                        audio.play();
+
+                    }
+                }
+
+                //Xử lý khi audio đang chạy
+                audio.onplay = function() {
+                    pause[0].style.display = 'block';
+                    play[0].style.display = 'none';
+                    pause[1].style.display = 'block';
+                    play[1].style.display = 'none';
+                    app.isPlaying = true;
+                }
+
+                //Xử lý khi audio đang dừng
+                audio.onpause = function() {
+                    pause[0].style.display = 'none';
+                    play[0].style.display = 'block';
+                    pause[1].style.display = 'none';
+                    play[1].style.display = 'block';
+                    app.isPlaying = false;
+                }
+
+                //Xử lý chuyển bài khi chọn bài khác
+                playlist.onclick = function(e) {
+                    const songNode = e.target.closest('.song-wrap:not(.active)');
+                    if(songNode || e.target.closest('.song__option')) {
+                        if(e.target.closest('.song__option')) {
+                        }
+                        else if(songNode) {
+                            app.currentIndex = songNode.dataset.index;
+                            app.loadCurrentSong();
+                            audio.play();
+                        }
+                       
+                    }
+                }
+
+                //Xử lý tự động chạy thanh tiến trình và thời gian 
+                audio.ontimeupdate = function() {
+                    let curTime = audio.currentTime;
+                    let progessPercent = 0;
+                    if(audio.duration) {
+                        progessPercent = Math.floor(curTime / audio.duration * 100);
+                    }
+                    myRange.value = progessPercent;
+
+
+                    let second = Math.floor(curTime % 60);
+                    let minute = Math.floor(curTime / 60);
+                    if(second < 10) second = '0' + second;
+                    if(minute < 10) minute = '0' + minute;
+                    currentTime.innerHTML = minute + ':' + second;
+
+                }
+
+                //Xử lý khi bấm nút next
+                nextBtn.onclick = function() {
+                    if(app.isShuffling) {
+                        app.shuffleSong();
+                    }
+                    else {
+                        app.nextSong();
+                    }
+                    app.loadCurrentSong();
+                    audio.play();
+                }
+                //Xử lý khi bấm nút previous
+                prevBtn.onclick = function() {
+                    if(app.isShuffling) {
+                        app.shuffleSong();
+                    }
+                    else {
+                        app.prevSong();
+                    }
+                    app.loadCurrentSong();
+
+                    audio.play();
+                }
+
+                //Xử lý khi kết thúc bài hát
+                audio.onended = function() {
+                    if(app.isRepeating) {
+                        audio.play();
+                    }
+                    else {
+                        if(app.isShuffling) {
+                            app.shuffleSong();
+                        }
+                        else {
+                            app.nextSong();
+                        }    
+                        app.loadCurrentSong();
+                        audio.play();
+                    }
+                }
+
+                //Xử lý khi tua bài hát
+                myRange.onchange = function() {
+                    if(audio.duration) {
+                        audio.currentTime = Math.floor(myRange.value * audio.duration / 100)
+                    }
+                }
+
+                //Xử lý khi thay đổi input âm lượng
+                myVolume.onchange = function() {
+                    let currentVolume = myVolume.value;
+                    audio.volume = currentVolume;
+                    if(currentVolume == 0) {
+                        app.showBtn(volumnBtns, 0);
+                        app.hideBtn(volumnBtns, 1);
+                        app.hideBtn(volumnBtns, 2);
+                    }
+                    else if(currentVolume >= 0.1 && currentVolume <= 0.5) {
+                        app.hideBtn(volumnBtns, 0);
+                        app.hideBtn(volumnBtns, 2);
+                        app.showBtn(volumnBtns, 1);
+
+                    }
+                    else {
+                        app.hideBtn(volumnBtns, 0);
+                        app.hideBtn(volumnBtns, 1);
+                        app.showBtn(volumnBtns, 2);
+
+                    }
+                }
+
+ 
+            },
+            
+
+            start: function() {
+
+                this.loadConfig();
+                this.defineProperties();
+                this.render();
+                this.handleEvent();
+                shuffleBtn.classList.toggle('btn--active', this.isShuffling);
+                repeatBtn.classList.toggle('btn--active', this.isRepeating);
+                myRange.value = 0;
+            }
+
+        }
+
+        app.start()
+    </script>
+</html>
