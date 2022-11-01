@@ -17,83 +17,174 @@
     </head>
     <body>
         <div class="grid-container">
-            <div class="grid-item-1">
-<<<<<<< HEAD
-                <h1>Test Abc</h1>
-                <p>OK, I'm not fine</p>
+            <div class="nav-bar grid-item-1">
+                <div class="spotify-logo"></div>
 
+                <ul class="menu">
+                    <li class="menu__category">
+                        <a href="" class="menu__link nav-bar__link">
+                            <i class="fa-solid fa-house"></i>
+                            <p>Home</p> 
+                        </a>
+                    </li>
+                    <li class="menu__category">
+                        <a href="" class="menu__link nav-bar__link">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <p>Search</p> 
+                        </a>
+                    </li>
+                    <li class="menu__category">
+                        <a href="" class="menu__link nav-bar__link">
+                            <i class="fa-solid fa-list"></i>
+                            <p>Your Library</p> 
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="rootlist-container">
+                    <ul class="rootlist">
+                        <li class="rootlist__category">
+                            <a href="" class="rootlist__link nav-bar__link">
+                                <div class="rootlist__icon rootlist__create-icon">
+                                    <i class="fa-solid fa-plus "></i>                                    
+                                </div>
+                                Create Playlist
+                            </a>
+                        </li>
+                        <li class="rootlist__category">
+                            <a href="" class="rootlist__link nav-bar__link">
+                                <div class=" rootlist__icon  rootlist__like-icon">
+                                    <i class="fa-solid fa-heart"></i>                                  
+                                </div>
+                                Liked Songs
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <div class="separation"></div>
+
+                    <ul class="your-playlist">
+                        <li class="your-playlist__category">
+                            <a href="" class="your-playlist__link nav-bar__link">My Playlist #1</a>
+                        </li>
+
+                        <li class="your-playlist__category">
+                            <a href="" class="your-playlist__link nav-bar__link">My Playlist #2</a>
+                        </li>
+
+                        <li class="your-playlist__category">
+                            <a href="" class="your-playlist__link nav-bar__link">My Playlist #3</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="main grid-item-2">
+            <div class="main grid-item-2" id="scroll-bar">
+                
                 <div class="player">
+                    <div class="player__bar">
+                        <div class="player__bar--left">
+                            <button id="player__bar-back-btn" class="btn">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+    
+                            <button id="player__bar-forward-btn" class="btn">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <div class="player__bar--hidden">
+                                <button class="player__bar-play play-btn">
+                                    <i class="fa-solid fa-play" ></i>
+                                    <i class="fa-solid fa-pause" style="display: none"></i>
+                                </button>
+
+                                <h4 class="player__bar-album">GiGi Hương Giang Mix</h4>
+
+                            </div>
+                            
+
+                        </div>
+
+                        <div class="player__bar--right">
+                            <div class="player__bar-upgrade">Upgrade</div>
+
+                            <div class="player__bar-user">
+                                <img class="bar-user__img" src="./img/user-1.jpg" alt="">
+                                <h4 class="bar-user__name">Vũ Khánh</h4>
+                                <i class="fa-solid fa-sort-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+
                     <div class="player__heading">
                         <div class="player__image">
                             <div class="blur"></div>
                             <div class="line"></div>
-                            <h2 class="player__image-text">Gigi Hương <br> Giang Mix</h2>
+                            <div class="player__image-info">
+                                <h2 class="image-info__text">Gigi Hương</h2>
+                                <h2 class="image-info__text">Giang Mix</h2>
+                            </div>
+                            <!-- <h2 class="player__image-text">Gigi Hương <br> Giang Mix</h2> -->
                         </div>
 
                         <div class="player__content">
-                            <span>PLAYLIST</span>
+                            <h2>PLAYLIST</h2>
                             <h4 class="content__album">GiGi Hương Giang Mix</h4>
                             <div class="content__singer-wrap">
-                                <a href="content__singer-link">JayKi</a> 
+                                <a href="" class="content__singer-link">Lauv</a> 
                                 , 
-                                <a href="content__singer-link">Hoàng Dũng</a>
+                                <a href="" class="content__singer-link">Ariana Grande</a>
                                 ,
-                                <a href="content__singer-link">Grey D</a>  
+                                <a href="" class="content__singer-link">The Weeknd</a>  
                                 and more
                             </div>
                             
-                            <div class="content__">
-                                Sportify
-                                <span>
+                            <div class="content__description">
+                                Spotify
+                                <div class="content__description-sum">
                                     <p class="content__song-quantity">50 songs</p>
+                                    , &nbsp 
                                     <p class="content__duration">about 3 hr 30 min</p> 
-                                </span>
+                                </div>
                             </div>
-                            
-
                         </div>
-
                     </div>
-                    
-                    <div class="player__body">
-                        <div class="body-left">
-                            <div class="body-left__function">
-                                <button class="function__btn-love">
-                                    <i class="fa-regular fa-heart btn-like"></i>
-                                    <i class="fa-solid fa-heart btn-dislike" style="display: none"></i>
-                                </button>
-                                <button class="function__btn-option"><i class="fa-solid fa-ellipsis"></i></button>
-                            </div>
-                        </div>
-                        <button class="body__btn-play play-btn">
+                
+                    <audio id="audio" src="" preload="metadata"></audio>
+                </div>
+
+                
+                <div class="main__body">
+                    <div class="function">
+                        <button class="function__play play-btn">
                             <i class="fa-solid fa-play" ></i>
                             <i class="fa-solid fa-pause" style="display: none"></i>
                         </button>
-                        
-                        
+                        <button class="function__love">
+                            <i class="fa-regular fa-heart btn-like"></i>
+                            <i class="fa-solid fa-heart btn-dislike" style="display: none"></i>
+                        </button>
+                        <button class="function__option"><i class="fa-solid fa-ellipsis"></i></button>
                     </div>
-                    
-                    <audio id="audio" src=""></audio>
-                </div>
-        
-                <div class="playlist">
-                    <div class="song-wrap active">
-                        <img src="./img/ab67616d00001e02520d32739a2c7ff2c70d4e85.jpg" alt="" class="song__img">
-                        <div class="song__description">
-                            <p class="song__name">Du Hành Vào Tâm Trí</p>
-                            <p class="song__singer">GiGi Hương Giang</p>
+
+                    <div class="playlist">
+                        <div class="song-wrap active">
+                            <img src="./img/du_hanh_vao_tam_tri.jpg" alt="" class="song__img">
+                            <div class="song__description">
+                                <p class="song__name">Du Hành Vào Tâm Trí</p>
+                                <p class="song__singer">GiGi Hương Giang</p>
+                            </div>
+                            <button class="song__option btn"><i class="fa-solid fa-ellipsis"></i></button>
                         </div>
-                        <button class="song__option btn"><i class="fa-solid fa-ellipsis"></i></button>
+            
                     </div>
-        
                 </div>
+                
             </div>
     
             <div class="playing-bar">
                 <div class="playing-bar__content">
-                    <img src="./img/ab67616d00001e02520d32739a2c7ff2c70d4e85.jpg" alt="" class="playing-bar__img song__img" style="width: 56px; height:56px">
+                    <img src="./img/du_hanh_vao_tam_tri.jpg" alt="" class="playing-bar__img song__img" style="width: 56px; height:56px">
                     <div class="playing-bar__des">
                         <p class="playing-bar__des-name song__name">Du Hành Vào Tâm Trí</p>
                         <p class="playing-bar__des-singer song__singer" style="font-size: 11px">GiGi Hương Giang</p>
@@ -158,12 +249,14 @@
 
         const main = $('.main');
         const player = $('.player');
+        const playerBar = $('.player__bar');
+        const playerBarRight = $('.player__bar--right');
         const playlist = $('.playlist'); 
-        const playBtn = $$('.play-btn');
-        const btnLike = $('.function__btn-love');
+        const playBtns = $$('.play-btn');
+        const btnLike = $('.function__love');
         const audio = $('#audio');
-        const play = $$('.fa-play');
-        const pause = $$('.fa-pause');
+        const playIcons = $$('.fa-play');
+        const pauseIcons = $$('.fa-pause');
         const myRange = $('#myRange');
         const myVolume = $('#myVolume');
         const playerHeading = $('.player__heading');
@@ -184,7 +277,7 @@
                 {
                     name: 'Du Hành Vào Tâm Trí', 
                     singer: 'GiGi Hương Giang', 
-                    image: './img/ab67616d00001e02520d32739a2c7ff2c70d4e85.jpg',
+                    image: './img/du_hanh_vao_tam_tri.jpg',
                     audio: './audio/DuHanhVaoTamTri.mp3'
                 },
                 {
@@ -250,7 +343,7 @@
                 {
                     name: 'Vu Vơ', 
                     singer: 'GiGi Hương Giang', 
-                    image: './img/ab67616d00001e02520d32739a2c7ff2c70d4e85.jpg',
+                    image: './img/du_hanh_vao_tam_tri.jpg',
                     audio: './audio/Vu_vơ.mp3'
                 },
                 {
@@ -274,7 +367,7 @@
                 {
                     name: 'Vu Vơ', 
                     singer: 'GiGi Hương Giang', 
-                    image: './img/ab67616d00001e02520d32739a2c7ff2c70d4e85.jpg',
+                    image: './img/du_hanh_vao_tam_tri.jpg',
                     audio: './audio/Vu_vơ.mp3'
                 }
             ],
@@ -335,7 +428,6 @@
                 }
                 songList[this.currentIndex].classList.add('active');
 
-                playerTitle.innerHTML = this.currentSong.name;
                 playerImg.style.backgroundImage = 'url(' + this.currentSong.image + ')';
 
                 playingBarImg.src = this.currentSong.image;
@@ -343,15 +435,16 @@
                 playingBarSinger.innerHTML = this.currentSong.singer;
                 audio.src = app.songs[this.currentIndex].audio;
 
-                setTimeout(function() {
+                audio.onloadedmetadata = function() {
                     let totalTime = audio.duration;
                     let seconds = Math.round(totalTime % 60);
                     let minutes = Math.floor(totalTime / 60);
                     if(seconds < 10) seconds = '0' + seconds;
                     if(minutes < 10) minutes = '0' + minutes;
                     durationTime.innerHTML = minutes + ':' + seconds;
+                }
 
-                }, 100)
+               
 
             },
             loadConfig: function() {
@@ -396,25 +489,46 @@
                 // Xử lý heading khi cuộn trang
                 const playerImgWidth = playerImg.offsetWidth;
                 const playerHeadingHeight = playerHeading.offsetHeight;
+                const playerBarLeft = $('.player__bar--left');
+                const album = $('.content__album');
+                const playBtnOnBar = $('.player__bar-play');
+                const albumOnBar = $('.player__bar-album'); 
+                const functionBar = $('.function');
+                const container = $('.container');
+
+
                 
                 main.onscroll = function() {
                     const scrollTop = main.scrollTop;
+                    playerBar.style.top = scrollTop + 'px';
                     var newWidth = playerImgWidth - scrollTop;
+                    var mainPlayBtn = playBtns[1];
+                    const playerBarHidden = $('.player__bar--hidden');
                     
-                    playerImg.style.height = newWidth > 0 ? newWidth + 'px' : 0;
-                    playerImg.style.opacity = newWidth / playerImgWidth;
-        
+                    
+                    if(scrollTop >= functionBar.offsetTop - playerBar.offsetHeight) {
+                        playerBar.style.backgroundColor = '#363333';
 
-                    if(scrollTop >= 193.6) {
-                        playerHeading.style.backgroundColor = 'rgb(35 61 86)';
-                        playBtn[0].style.position = 'fixed';
-                        playBtn[0].style.right = '16px';
-                        playBtn[0].style.top = '28px';
+                    }
+                    else {
+                        playerBar.style.backgroundColor = 'transparent';
+
+                    }
+
+                    if(scrollTop >= mainPlayBtn.offsetTop + mainPlayBtn.offsetHeight / 3  - playerBar.offsetHeight) {
+                        playerBarHidden.style.display = 'flex';
+                        // playBtnOnBar.style.display = 'block';
+                        // albumOnBar.style.display = 'block';
+                        playerBar.style.backgroundColor = '#363333';
+
                     }
                     else 
                     {
-                        playerHeading.style.backgroundColor = 'transparent';
-                        $('.body__btn-play').style = '';
+                        $('.function__play').style = '';
+                        playerBarHidden.style.display = 'none';
+                        // playBtnOnBar.style.display = 'none';
+                        // albumOnBar.style.display = 'none';
+
                     }
                 }
 
@@ -452,42 +566,40 @@
                 }
                 
                 //Xử lý khi bấm nút PLAY
-                playBtn[0].onclick = function() {
-                    if(app.isPlaying) {
-                        audio.pause();
-                    }
-                    else {
-                        audio.play();
+                Array.from(playBtns).forEach(function(btn) {
+                    btn.onclick = function() {
+                        if(app.isPlaying) {
+                            audio.pause();
+                        }
+                        else {
+                            audio.play();
 
+                        }
                     }
-                }
-
-                playBtn[1].onclick = function() {
-
-                    if(app.isPlaying) {
-                        audio.pause();
-                    }
-                    else {
-                        audio.play();
-
-                    }
-                }
+                })
 
                 //Xử lý khi audio đang chạy
                 audio.onplay = function() {
-                    pause[0].style.display = 'block';
-                    play[0].style.display = 'none';
-                    pause[1].style.display = 'block';
-                    play[1].style.display = 'none';
+                    Array.from(pauseIcons).forEach(function(icon) {
+                        icon.style.display = 'block';
+                    }) 
+                    
+                    Array.from(playIcons).forEach(function(icon) {
+                        icon.style.display = 'none';
+                    }) 
+                   
                     app.isPlaying = true;
                 }
 
                 //Xử lý khi audio đang dừng
                 audio.onpause = function() {
-                    pause[0].style.display = 'none';
-                    play[0].style.display = 'block';
-                    pause[1].style.display = 'none';
-                    play[1].style.display = 'block';
+                    Array.from(pauseIcons).forEach(function(icon) {
+                        icon.style.display = 'none';
+                    }) 
+                    
+                    Array.from(playIcons).forEach(function(icon) {
+                        icon.style.display = 'block';
+                    }) 
                     app.isPlaying = false;
                 }
 
